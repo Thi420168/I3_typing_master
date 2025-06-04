@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Test App</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to right, #e3f2fd, #fbe9e7);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card {
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      h1 {
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 30px;
+      }
+
+      .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        background-color: #4a90e2;
+        color: #fff;
+        padding: 12px;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        background-color: #357ab7;
+      }
+
+      @media (max-width: 480px) {
+        .card {
+          margin: 20px;
+          padding: 30px 20px;
+        }
+
+        h1 {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Welcome to Typing Test</h1>
+      <div class="nav-links">
+        <a href="login.html">Login</a>
+        <a href="logout.html">Logout</a>
+        <a href="register.html">Register</a>
+        <a href="typing-test.html">Typing Test</a>
+      </div>
+    </div>
+  </body>
+</html>
