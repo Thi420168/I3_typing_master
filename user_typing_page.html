@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Typing Test UI</title>
+    <style>
+      /* Internal CSS for the basic typing test UI */
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f4f4f4; /* Light gray background */
+        color: #333;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        box-sizing: border-box;
+      }
+
+      .container {
+        background-color: #ffffff;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 600px;
+        text-align: center;
+      }
+
+      h1 {
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      .stats {
+        margin-bottom: 20px;
+        font-size: 1.1em;
+      }
+
+      .stat-item {
+        margin: 5px 0;
+      }
+
+      .stat-item span {
+        font-weight: bold;
+        color: #007bff; /* Blue for stat values */
+      }
+
+      .sample-text-container {
+        background-color: #e9e9e9;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 15px;
+        margin-bottom: 15px;
+        font-size: 1.05em;
+        line-height: 1.5;
+        text-align: left;
+        min-height: 80px; /* Adjusted height for static display */
+        white-space: pre-wrap; /* Ensures text wraps and spaces are preserved */
+      }
+
+      #typing-area {
+        width: 100%;
+        padding: 10px;
+        font-size: 1.05em;
+        border: 1px solid #bbb;
+        border-radius: 5px;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+        resize: none;
+        background-color: #f9f9f9; /* Slightly different background for disabled look */
+      }
+
+      .controls button {
+        padding: 10px 20px;
+        font-size: 1em;
+        color: white;
+        background-color: #007bff; /* Primary blue */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 5px;
+      }
+
+      .controls button:hover {
+        background-color: #0056b3; /* Darker blue */
+      }
+
+      .controls button.reset {
+        background-color: #6c757d; /* Gray for reset */
+      }
+      .controls button.reset:hover {
+        background-color: #5a6268;
+      }
+
+      #results-display {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #f8f9fa; /* Lighter background for static results */
+        border-radius: 5px;
+        border: 1px solid #dee2e6;
+        text-align: left;
+      }
+      #results-display h2 {
+        margin-top: 0;
+        font-size: 1.2em;
+        color: #495057;
+      }
+      #results-display p {
+        margin: 8px 0;
+        font-size: 1em;
+        color: #212529;
+      }
+      #results-display strong {
+        color: #007bff;
+      }
+
+      footer {
+        margin-top: 25px;
+        font-size: 0.85em;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Basic Typing Test</h1>
+
+      <div class="stats">
+        <div class="stat-item">Time Remaining: <span id="time">60</span>s</div>
+      </div>
+
+      <div class="sample-text-container" id="sample-text-display">
+        The quick brown fox jumps over the lazy dog. This is some sample text
+        for the typing test.
+      </div>
+
+      <textarea
+        id="typing-area"
+        rows="4"
+        placeholder="Your typing will appear here..."
+        readonly
+      ></textarea>
+
+      <div class="controls">
+        <button id="start-btn">Start Test</button>
+        <button id="reset-btn" class="reset">Reset</button>
+      </div>
+
+      <div id="results-display">
+        <h2>Test Results:</h2>
+        <p>Words Per Minute (WPM): <strong id="result-wpm">--</strong></p>
+        <p>Accuracy: <strong id="result-accuracy">--%</strong></p>
+        <p>Characters Typed: <strong id="result-chars">--</strong></p>
+        <p>Errors: <strong id="result-errors">--</strong></p>
+      </div>
+
+      <footer>
+        <p>&copy; 2025 SimpleType UI. For demonstration purposes.</p>
+      </footer>
+    </div>
+    <!-- No JavaScript -->
+  </body>
+</html>
